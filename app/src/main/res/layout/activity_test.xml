@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LibraryActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                app:trackColor="@color/Aeroblue"
+                app:indicatorColor="@color/Aquamarine"
+                android:id="@+id/progress_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imgTestIcon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="44dp"
+                android:src="@drawable/ic_newimage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textTestName" />
+
+
+            <TextView
+                android:id="@+id/textTestName"
+                android:layout_width="214dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:ems="10"
+                android:text="Tên bài thi"
+                android:textColor="#000000"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress_horizontal" />
+
+            <TextView
+                android:id="@+id/textClassName"
+                android:layout_width="214dp"
+                android:layout_height="64dp"
+                android:ems="10"
+                android:text="Tên lớp"
+                android:textColor="#000000"
+                android:textSize="36sp"
+                app:layout_constraintStart_toStartOf="@+id/textTestName"
+                app:layout_constraintTop_toBottomOf="@+id/textTestName" />
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="214dp"
+                android:layout_height="46dp"
+                android:ems="10"
+                android:text="Mô tả (không bắt buộc)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textTestName"
+                app:layout_constraintTop_toBottomOf="@+id/textClassName" />
+
+            <TextView
+                android:id="@+id/textQuesNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="Số câu: "
+                android:textColor="#000000"
+
+                app:layout_constraintTop_toBottomOf="@+id/textDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+
+            <RelativeLayout
+                android:id="@+id/textABCD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textQuesNumber"
+                android:layout_marginTop="50dp">
+
+                <TextView
+                    android:id="@+id/textA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/gapAB"
+                    android:layout_width="71dp"
+                    android:layout_height="15dp"
+                    android:layout_toRightOf="@+id/textA" />
+
+                <TextView
+                    android:id="@+id/textB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/gapAB"
+                    android:text="B"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/gapBC"
+                    android:layout_width="71dp"
+                    android:layout_height="15dp"
+                    android:layout_toRightOf="@+id/textB" />
+
+                <TextView
+                    android:id="@+id/textC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/gapBC"
+                    android:text="C"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/gapCD"
+                    android:layout_width="71dp"
+                    android:layout_height="15dp"
+                    android:layout_toRightOf="@+id/textC" />
+
+                <TextView
+                    android:id="@+id/textD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/gapCD"
+                    android:text="D"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/topDivider"
+                android:layout_width="305dp"
+                android:layout_height="1dp"
+                android:background="@color/Aquamarine"
+                app:layout_constraintTop_toBottomOf="@+id/textABCD"
+                app:layout_constraintEnd_toEndOf="@+id/ineditableAnswerRecView"
+                app:layout_constraintStart_toStartOf="@+id/ineditableAnswerRecView"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ineditableAnswerRecView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/topDivider"
+                tools:layout_editor_absoluteX="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <ImageView
+                android:id="@+id/buttonCapture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button_capture_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ineditableAnswerRecView" />
+
+            <ImageView
+                android:id="@+id/buttonChangeAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_change_answer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ineditableAnswerRecView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="#ffffff"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

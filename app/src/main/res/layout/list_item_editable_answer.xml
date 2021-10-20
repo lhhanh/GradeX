@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/quesNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/answerA"
+            app:layout_constraintEnd_toStartOf="@+id/lineA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/answerA" />
+
+        <ImageView
+            android:id="@+id/lineA"
+            android:layout_width="1dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="304dp"
+            android:background="@color/Aquamarine"
+
+            app:layout_constraintBottom_toBottomOf="@+id/answerA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/answerA"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/answerA"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="228dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/lineA"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/lineAB"
+            android:layout_width="1dp"
+            android:layout_height="75dp"
+            android:background="@color/Aquamarine"
+            app:layout_constraintBottom_toBottomOf="@+id/answerA"
+            app:layout_constraintStart_toEndOf="@+id/answerA"
+            app:layout_constraintTop_toTopOf="@+id/answerA" />
+
+        <ImageView
+            android:id="@+id/answerB"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/answerA"
+            app:layout_constraintStart_toEndOf="@+id/lineAB"
+            app:layout_constraintTop_toTopOf="@+id/answerA"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/lineBC"
+            android:layout_width="1dp"
+            android:layout_height="75dp"
+            android:background="@color/Aquamarine"
+            app:layout_constraintBottom_toBottomOf="@+id/answerA"
+            app:layout_constraintStart_toEndOf="@+id/answerB"
+            app:layout_constraintTop_toTopOf="@+id/answerA"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/answerC"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/answerA"
+            app:layout_constraintStart_toEndOf="@+id/lineBC"
+            app:layout_constraintTop_toTopOf="@+id/answerA"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/lineCD"
+            android:layout_width="1dp"
+            android:layout_height="75dp"
+            android:background="@color/Aquamarine"
+            app:layout_constraintBottom_toBottomOf="@+id/answerA"
+            app:layout_constraintStart_toEndOf="@+id/answerC"
+            app:layout_constraintTop_toTopOf="@+id/answerA"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/answerD"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/answerA"
+            app:layout_constraintStart_toEndOf="@+id/lineCD"
+            app:layout_constraintTop_toTopOf="@+id/answerA"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/lineD"
+            android:layout_width="1dp"
+            android:layout_height="75dp"
+            android:background="@color/Aquamarine"
+            app:layout_constraintBottom_toBottomOf="@+id/answerA"
+            app:layout_constraintStart_toEndOf="@+id/answerD"
+            app:layout_constraintTop_toTopOf="@+id/answerA"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="305dp"
+            android:layout_height="1dp"
+            android:background="@color/Aquamarine"
+            app:layout_constraintBottom_toBottomOf="@+id/answerA"
+            app:layout_constraintEnd_toEndOf="@+id/answerD"
+            app:layout_constraintStart_toStartOf="@+id/answerA" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
